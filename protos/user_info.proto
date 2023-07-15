@@ -1,0 +1,15 @@
+syntax = "proto3";
+package example;
+
+message UserRequest {
+    string name = 1;
+}
+
+message UserResponse {
+    string address = 1;
+    string error = 2;
+}
+
+service UserService {
+    rpc getUserAddress(UserRequest) returns (UserResponse) {} ;
+}
